@@ -10,7 +10,7 @@
 }
 /* ROOT VARIABLER */
 :root {
-    --primary-color: #2563eb;
+    --primary-color: #000001;
     --secondary-color: #3b82f6;
     --background-color: #f1f5f9;
     --white: #ffffff;
@@ -57,6 +57,10 @@ header .container {
     font-weight: 700;
 }
 /* NAVIGATION */
+nav {
+    position: relative;
+    z-index: 1001;
+}
 .nav-links {
     align-items: center;
     display: flex;
@@ -204,7 +208,7 @@ header .container {
 
     overflow: hidden;
 
-    box-shadow: 0.5 px 15px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -296,6 +300,7 @@ footer {
         padding: 1.5rem;
         border-radius: 12px;    
         width: 220px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     }
     .nav-links.active {
         display: flex;
