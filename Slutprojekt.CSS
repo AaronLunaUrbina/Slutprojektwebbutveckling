@@ -1,10 +1,14 @@
+
+/*================================
+    Index.css
+ ================================ */
 /* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-/* Root variabler */
+/* ROOT VARIABLER */
 :root {
     --primary-color: #2563eb;
     --secondary-color: #3b82f6;
@@ -13,7 +17,7 @@
     --text-color: #1e293b;
     --gray: #94a3b8;
 }
-/*Body*/
+/*BODY*/
 body {
     font-family:"Poppins", sans-serif;
     background-color: var(--background-color);
@@ -21,14 +25,14 @@ body {
     line-height: 1.6;
 }
 
-/* Globala containers */
+/* GLOBALA CONTAINERS */
 .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* Header */
+/* HEADER */
 header {
     background-color: var(--primary-color);
     position: sticky;
@@ -44,7 +48,7 @@ header .container {
     padding: 1.2rem 0;
 }
 
-/*loggan*/
+/*lOGGAN*/
 .logo {
     text-decoration: none;
     color: var(--white);
@@ -52,7 +56,7 @@ header .container {
     font-size: 1.8rem;
     font-weight: 700;
 }
-/* Navigation */
+/* NAVIGATION */
 .nav-links {
     align-items: center;
     display: flex;
@@ -67,21 +71,24 @@ header .container {
     transition: color 0.3s ease;
 }
 
-nav-links a:hover {
+.nav-links a:hover {
     color: var(--secondary-color);
 }
 
-/* Hamburger knapp */
+/* HAMBURGER KNAPP */
 .menu-toggle {
     display: none;
+
     background: none;
     border: none;
+
     color: var(--white);
     font-size: 2rem;
+
     cursor: pointer;
 }
 
-/* Hero sektion */
+/* HERO SEKTIONEN */
 .hero {
     min-height: 90vh;
 
@@ -94,7 +101,7 @@ nav-links a:hover {
     text-align: center;
 }
 
-/* Mörk overlay */
+/* Mörk overlay för hero */
 .hero-overlay {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 2rem;
@@ -106,3 +113,180 @@ nav-links a:hover {
 }
 
 /* Hero content */
+.hero-content {
+    color: var(--white);
+    text-align: center;
+
+    max-width: 800px;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* Hero knapp */
+.hero-btn {
+    display: inline-block;
+
+    text-decoration: none;
+    background-color: var(--secondary-color);
+
+    color: var(--white);
+    padding: 1rem 2rem;
+
+    border-radius: 10px;
+
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+/* Hover effekt för hero knapp */
+.hero-btn:hover {
+    background-color: #0ea5e9;
+
+    transform: translateY(-3px);
+}
+
+/* FEATURES SEKTIONEN */
+.features {
+    padding: 6rem 0;
+}
+
+.features h2 {
+    text-align: center;
+
+    font-size: 2.5rem;
+    margin-bottom: 4rem;
+}
+
+/* Kort grid */
+.korter {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 2rem;
+}
+/*kort*/
+.kort {
+    background-color: var(--white);
+
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    box-shadow: 0 5 px 15px rgba(0, 0, 0, 0.08);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effekt för kort */
+.kort:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+/* Kort bild */
+.kort img {
+    width: 100%;
+    height: 220px;
+
+    object-fit: cover;
+}
+/*kort text*/
+.card h3 {
+    font-size: 1.5rem;
+    margin: 1.5rem 1.5rem 1rem;
+}
+.card p {
+    margin: 0 1.5rem 1.5rem;
+    color: var(--gray);
+}
+
+/* INFO SEKTIONEN */
+.info-section {
+    background-color: var(--white);
+    padding: 6rem 0;
+}
+.info-text {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.info-text h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.info-text p {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--gray);
+}
+/* listor */
+.info-text ul {
+    list-style: none;
+}
+
+.info-text li{
+    margin-bottom: 1rem;
+
+    font-size: 1.1rem;
+}
+
+/* FOOTER */
+footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 1.5rem;
+}
+
+/* RESPONSIV DESIGN */
+@media (max-width: 768px) {
+    /* HERO */
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    .hero-content p {
+        font-size: 1rem;
+    }
+    /*HAMBURGER */
+    .menu-toggle {
+        display: block;
+    }
+
+    /*MOBIL NAV */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        right: 20px;
+        background-color: var(--primary-color);
+        padding: 1.5rem;
+        border-radius: 12px;    
+        width: 220px;
+    }
+    .nav-links.active {
+        display: flex;
+    }
+    /*KORTER*/
+    .korter {
+        grid-template-columns: 1fr;
+    }
+    /*FEATURES*/
+    .features h2,
+    .info-text h2 {
+        font-size: 2.0rem;
+    }
+}
+    
