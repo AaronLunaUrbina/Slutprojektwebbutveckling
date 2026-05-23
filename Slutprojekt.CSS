@@ -1,0 +1,108 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Root variabler */
+:root {
+    --primary-color: #2563eb;
+    --secondary-color: #3b82f6;
+    --background-color: #f1f5f9;
+    --white: #ffffff;
+    --text-color: #1e293b;
+    --gray: #94a3b8;
+}
+/*Body*/
+body {
+    font-family:"Poppins", sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Globala containers */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    background-color: var(--primary-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1.2rem 0;
+}
+
+/*loggan*/
+.logo {
+    text-decoration: none;
+    color: var(--white);
+
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+/* Navigation */
+.nav-links {
+    align-items: center;
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav-links a:hover {
+    color: var(--secondary-color);
+}
+
+/* Hamburger knapp */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Hero sektion */
+.hero {
+    min-height: 90vh;
+
+    background-image: url(kommersenare.jpg);
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+/* Mörk overlay */
+.hero-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    width: 100%;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hero content */
