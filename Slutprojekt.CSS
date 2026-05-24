@@ -418,7 +418,20 @@ footer {
     .schema-hero h1 {
         font-size: 2.5rem;
     }
-}
+     .kontakt-hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .kontakt-wrapper {
+                grid-template-columns: 1fr;
+                padding: 3rem 0;
+            }
+
+            #karta {
+                height: 300px;
+            }
+        }
+
 
 /*================================
     SCHEMA.CSS
@@ -552,3 +565,200 @@ td.drop-target {
     padding: 0;
     line-height: 1;
 }
+
+/*================================
+    KONTAKT.CSS
+ ================================ */
+ .kontakt-hero {
+            min-height: 40vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--white);
+            text-align: center;
+            padding: 4rem 1rem;
+        }
+
+        .kontakt-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .kontakt-hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Kontakt-layout: formulär + karta sida vid sida */
+        .kontakt-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            padding: 5rem 0;
+            align-items: start;
+        }
+
+        /* FORMULÄR */
+        .kontakt-form h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            padding: 0.85rem 1rem;
+            border: 1.5px solid #cbd5e1;
+            border-radius: 10px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.95rem;
+            background-color: var(--white);
+            color: var(--text-color);
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--secondary-color);
+        }
+
+        /* Felmarkering */
+        .form-group input.fel,
+        .form-group textarea.fel,
+        .form-group select.fel {
+            border-color: #ef4444;
+        }
+
+        /* Felmeddelande */
+        .felmeddelande {
+            color: #ef4444;
+            font-size: 0.85rem;
+            display: none;
+        }
+
+        .felmeddelande.synlig {
+            display: block;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 140px;
+        }
+
+        /* Skicka-knapp */
+        .skicka-btn {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: var(--white);
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 10px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            width: 100%;
+        }
+
+        .skicka-btn:hover {
+            background-color: #0ea5e9;
+            transform: translateY(-3px);
+        }
+
+        /* Bekräftelsemeddelande efter skickat */
+        .bekraftelse {
+            display: none;
+            background-color: #dcfce7;
+            border: 1.5px solid #86efac;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-top: 1.5rem;
+            color: #166534;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        .bekraftelse.synlig {
+            display: block;
+        }
+
+        /* KARTA */
+        .karta-sektion h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .karta-sektion p {
+            color: var(--gray);
+            margin-bottom: 1.5rem;
+        }
+
+        #karta {
+            width: 100%;
+            height: 420px;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+        }
+
+        /* KONTAKTINFO */
+        .kontakt-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .info-rad {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-size: 0.95rem;
+            color: var(--text-color);
+        }
+
+        .info-ikon {
+            width: 40px;
+            height: 40px;
+            background-color: var(--secondary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+
+        /* Responsivitet för kontaktsidan */
+        @media (max-width: 768px) {
+            .kontakt-hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .kontakt-wrapper {
+                grid-template-columns: 1fr;
+                padding: 3rem 0;
+            }
+
+            #karta {
+                height: 300px;
+            }
+        }
