@@ -279,6 +279,10 @@ footer {
 
 /* RESPONSIV DESIGN */
 @media (max-width: 768px) {
+    /* HEADER */
+    header .container {
+        position: relative;
+    }
     /* HERO */
     .hero-content h1 {
         font-size: 2.5rem;
@@ -293,7 +297,7 @@ footer {
 
     /*MOBIL NAV */
     .nav-links {
-        display: none;
+        display: flex;
         flex-direction: column;
         position: absolute;
         top: 80px;
@@ -303,10 +307,48 @@ footer {
         border-radius: 12px;    
         width: 220px;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+
+        /*startläge*/
+        opacity: 0;
+        transform: translateY(-25px);
+        pointer-events: none;
+
+        /*animation*/
+        transition: opacity 0.35s ease, transform 0.35s ease;
     }
+    
+     /*Öppen meny*/
     .nav-links.active {
-        display: flex;
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
     }
+
+    /*Gör så att länkar kommer in en efter en*/
+    .nav-links.active li {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.35s ease;
+    }
+    .nav-links.active li {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    /*Delay*/
+    .nav-links li:nth-child(1) {
+        transition-delay: 0.05s;
+    }
+    .nav-links li:nth-child(2) {
+        transition-delay: 0.1s;
+    }
+    .nav-links li:nth-child(3) {
+        transition-delay: 0.15s;
+    }
+    .nav-links li:nth-child(4) {
+        transition-delay: 0.2s;
+    }
+    
     /*KORTER*/
     .korter {
         grid-template-columns: 1fr;
