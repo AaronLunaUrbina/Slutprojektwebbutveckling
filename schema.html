@@ -35,18 +35,18 @@
         <section class="filters">
             <div class="container">
             <div class="select-row">
-            <select>
-            <option>Program</option>
-            <option>Ekonomi</option>
-            <option>Teknik</option>
-            <option>Samhälle</option>
-            <option>Estet</option>
+            <select id="program">
+            <option value="">Program</option>
+            <option value="ekonomi">Ekonomi</option>
+            <option value="teknik">Teknik</option>
+            <option value="samhalle">Samhälle</option>
+            <option value="estet">Estet</option>
             </select>
-            <select>
-            <option>Årskurs</option>
-            <option>1:an</option>
-            <option>2:an</option>
-            <option>3:an</option>
+            <select id="year">
+            <option value="">Årskurs</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
             </select>
             </div>
             </div>
@@ -54,7 +54,7 @@
         <section class="course-sections">
             <div class="container">
                 <h2>Mina kurser</h2>
-            <div class="course-grid">
+            <div class="course-grid" id="courseGrid">
             <div class="course">Matematik 2</div>
             <div class="course">Svenska 2</div>
             <div class="course">Engelska 6</div>
