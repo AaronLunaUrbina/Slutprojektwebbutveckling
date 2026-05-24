@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const Menyknapp = 
+    const menyKnapp = 
     document.querySelector('.menu-toggle');
     const navLinks = document.querySelector('.nav-links');
-    menuButton.addEventListener('click', () => {
+    menyKnapp.addEventListener('click', () => {
         navLinks.classList.toggle('active');
     });
 });
