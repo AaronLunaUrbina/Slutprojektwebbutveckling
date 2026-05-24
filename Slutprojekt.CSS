@@ -42,10 +42,14 @@ header {
 
 header .container {
     display: flex;
+
     justify-content: space-between;
+
     align-items: center;
 
-    padding: 1.2rem 0;
+    position: relative;
+
+    width: 100%;
 }
 
 /*lOGGAN*/
@@ -83,15 +87,17 @@ nav {
 
 /* HAMBURGER KNAPP */
 .menu-toggle {
-    display: none;
+    display: block;
 
-    background: none;
-    border: none;
+    font-size: clamp(1.3rem, 5vw, 1.8rem);
 
-    color: var(--white);
-    font-size: 2rem;
+    padding: 0.3rem;
 
-    cursor: pointer;
+    margin-left: 0;
+
+    flex-shrink: 0;
+
+    z-index: 1002;
 }
 
 /* HERO SEKTIONEN */
@@ -281,8 +287,17 @@ footer {
 @media (max-width: 768px) {
     /* HEADER */
     header .container {
+        display: flex;
+        
+        align-items: center;
         position: relative;
     }
+
+    /* LOGGA */
+    .logo {
+        font-size: 1.5rem;
+    }
+
     /* HERO */
     .hero-content h1 {
         font-size: 2.5rem;
@@ -293,24 +308,29 @@ footer {
     /*HAMBURGER */
     .menu-toggle {
         display: block;
+        margin-left: auto;
+        font-size: 1.7rem;
+        padding: 0.5rem;
+
+        z-index: 1002;
     }
+    
 
     /*MOBIL NAV */
     .nav-links {
-        display: flex;
         flex-direction: column;
         position: absolute;
-        top: 80px;
-        right: 20px;
+        top: 70px;
+        right: 0;
         background-color: var(--primary-color);
-        padding: 1.5rem;
-        border-radius: 12px;    
-        width: 220px;
+        padding: 1rem;
+        border-radius: 12px;
+        width: min(220px, 80vw);
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 
         /*startläge*/
         opacity: 0;
-        transform: translateY(-25px);
+        transform: translateY(-20px);
         pointer-events: none;
 
         /*animation*/
@@ -322,6 +342,10 @@ footer {
         opacity: 1;
         transform: translateY(0);
         pointer-events: auto;
+    }
+    .nav-links a {
+        width: 100%;
+        padding: 0.7rem
     }
 
     /*Gör så att länkar kommer in en efter en*/
