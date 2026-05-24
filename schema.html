@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PluggaPå | Mitt schema</title>
+    <title>PluggaPå! | Mitt schema</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
- <link rel="stylesheet" href="Slutprojekt.CSS">
+    <link rel="stylesheet" href="Slutprojekt.CSS">
 </head>
 <body>
     <header>
@@ -24,145 +23,84 @@
             </nav>
         </div>
     </header>
+
     <main>
         <section class="schema-hero">
             <div class="container">
                 <h1>Bygg ditt personliga schema</h1>
                 <p>Planera dina uppgifter, prov och studietid. Preparera utan stress.</p>
-                <!-- Schema-innehåll kommer att läggas till här -->
             </div>
         </section>
+
         <section class="filters">
             <div class="container">
-            <div class="select-row">
-            <select id="program">
-            <option value="">Program</option>
-            <option value="ekonomi">Ekonomi</option>
-            <option value="teknik">Teknik</option>
-            <option value="samhalle">Samhälle</option>
-            <option value="natur">Natur</option>
-            </select>
-            <select id="year">
-            <option value="">Årskurs</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            </select>
-            </div>
+                <div class="select-row">
+                    <select id="program">
+                        <option value="">Program</option>
+                        <option value="ekonomi">Ekonomi</option>
+                        <option value="teknik">Teknik</option>
+                        <option value="samhalle">Samhälle</option>
+                        <option value="natur">Natur</option>
+                    </select>
+                    <select id="year">
+                        <option value="">Årskurs</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </div>
             </div>
         </section>
+
         <section class="course-sections">
             <div class="container">
                 <h2>Mina kurser</h2>
-            <div class="course-grid" id="courseGrid">
-            <div class="course">Matematik 2</div>
-            <div class="course">Svenska 2</div>
-            <div class="course">Engelska 6</div>
-            <div class="course">Fysik 2</div>
-            <div class="course">Kemi 1</div>        
-            <div class="course">Biologi 2</div>
-            </div>
+                <div class="course-grid" id="courseGrid">
+                    <div class="course">Välj program och årskurs för att se dina kurser</div>
+                </div>
             </div>
         </section>
+
         <section class="planner">
-        <div class="container">
-            <h2>Studieplanering (up till 10 veckor)</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Vecka</th>
-                        <th>Mål</th>
-                        <th>Prov</th>
-                        <th>Uppgifter</th>
-                    </tr>
-                </thead>
-                <tbody>
-
-<tr>
-<td>1</td>
-<td contenteditable="true"></td>
-<td contenteditable="true"></td>
-<td contenteditable="true"></td>
-</tr>
-
-<tr>
-<td>2</td>
-<td contenteditable="true"></td>
-<td contenteditable="true"></td>
-<td contenteditable="true"></td>
-</tr>
-
-<tr>
-<td>3</td>
-<td contenteditable="true"></td>
-<td contenteditable="true"></td>
-<td contenteditable="true"></td>
-</tr>
-
-<tr>
-<td>4</td>
-<td contenteditable="true"></td>
-<td contenteditable="true"></td>
-<td contenteditable="true"></td>
-</tr>
-
-<tr>
-<td>5</td>
-<td contenteditable="true"></td>
-<td contenteditable="true"></td>
-<td contenteditable="true"></td>
-</tr>
-
-<tr>
-<td>6</td>
-<td contenteditable="true"></td>
-<td contenteditable="true"></td>
-<td contenteditable="true"></td>
-</tr>
-
-<tr>
-<td>7</td>
-<td contenteditable="true"></td>
-<td contenteditable="true"></td>
-<td contenteditable="true"></td>
-</tr>
-
-<tr>
-<td>8</td>
-<td contenteditable="true"></td>
-<td contenteditable="true"></td>
-<td contenteditable="true"></td>
-</tr>
-
-<tr>
-<td>9</td>
-<td contenteditable="true"></td>
-<td contenteditable="true"></td>
-<td contenteditable="true"></td>
-</tr>
-
-<tr>
-<td>10</td>
-<td contenteditable="true"></td>
-<td contenteditable="true"></td>
-<td contenteditable="true"></td>
-</tr>
-
-</tbody>
-                <tfoot>
-                    <tr>
-                        <td colspan="3">Max 10 veckor framåt</td>
-                    </tr>
-                </tfoot>
-            </table>
-        </div>
+            <div class="container">
+                <h2>Studieplanering (upp till 10 veckor)</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Vecka</th>
+                            <th>Mål</th>
+                            <th>Prov</th>
+                            <th>Uppgifter</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td></tr>
+                        <tr><td>2</td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td></tr>
+                        <tr><td>3</td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td></tr>
+                        <tr><td>4</td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td></tr>
+                        <tr><td>5</td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td></tr>
+                        <tr><td>6</td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td></tr>
+                        <tr><td>7</td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td></tr>
+                        <tr><td>8</td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td></tr>
+                        <tr><td>9</td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td></tr>
+                        <tr><td>10</td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td></tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="4">Max 10 veckor framåt</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
         </section>
     </main>
+
     <footer>
         <div class="container">
-            <p>&copy; 2026 PluggaPå!</p>
+            <p>&copy; 2026 PluggaPå! | Skapad av gymnasieelever för gymnasieelever</p>
         </div>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>

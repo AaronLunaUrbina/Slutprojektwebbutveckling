@@ -518,3 +518,37 @@ footer {
     color: var(--white);
     transform:translateY(-8px);
 }
+/* Drag och släpp CSS */
+.course.dragging {
+    opacity: 0.6;
+    cursor: grabbing;
+}
+/* Kurs som är dragbar */
+.course[draggable=true] {
+    cursor: grab;
+}
+/*Tabell cell som är aktiv drop-zon */
+td.drop-target {
+    background-color: var(--secondary-color);
+    outline: 2px dashed var(--white);
+}
+/*Kurs-tagg inuti tabellcell */
+.course-tag {
+    display: inline-flex;
+    background-color: var(--secondary-color);
+    color: var(--white);
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-size: 1rem;
+    margin:2px;
+}
+/* Ta bort-knapp på taggen */
+.remove-tag {
+    background: none;
+    border: none;
+    color: var(--white);
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0;
+    line-height: 1;
+}
