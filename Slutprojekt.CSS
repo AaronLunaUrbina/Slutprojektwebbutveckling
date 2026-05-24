@@ -1,6 +1,6 @@
 
 /*================================
-    Index.css
+    INDEX.CSS
  ================================ */
 /* Reset */
 * {
@@ -358,14 +358,106 @@ footer {
     .info-text h2 {
         font-size: 2.0rem;
     }
+    .select-row {
+        flex-direction: column;
+        align-items: center;
+    }
+    .course-grid {
+        grid-template-columns: 1fr;
+    }
+    .schema-hero h1 {
+        font-size: 2.5rem;
+    }
 }
-    /*=====================
-SCHEMA
-=====================*/
-.schema-hero {
+
+/*================================
+    SCHEMA.CSS
+ ================================ */
+
+ /*Hero sektion för schema sidan*/
+ .schema-hero {
     min-height: 50vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--white);
+    text-align: center;
+    padding: 4rem 1rem;
+ }
+    .schema-hero h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+    .schema-hero p {
+        font-size: 1.2rem;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+    /* Filter (samma kort känsla som index) */
+    .select-row {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin: 4rem 0;
+    }
+
+    select {
+    padding: 1rem 1.2rem;
+    border: 1px solid var(--gray);
+    border-radius: 12px;
+    font-family: inherit;
+    background: var(--white);
+    }
+    /* Kurs kort */
+    .course-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    }
+    .course {
+    background-color: var(--white);
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    }
+    .course:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Icke tillgängliga kurser (beroende på vilken linje eller individuella val man har) */
+    .course.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+    }
+    /* Tabellen/planeraren för det interaktiva schemat */
+    .planner {
+     padding: 5rem 0;
+    }
+    table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    }
+    th {
     background-color: var(--primary-color);
-}
+    color: var(--white);
+    padding: 1rem;
+    }
+    td {
+        height: 120px;
+        padding: 1rem;
+        border-bottom: 1px solid var(--gray);
+        vertical-align: top;
+    }
+    tbody tr:nth-child(even) {
+        background-color: var(--background-color)
+    }
+    tfoot{
+        background-color: var(--background-color);
+    }
