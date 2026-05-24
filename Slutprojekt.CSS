@@ -244,7 +244,6 @@ nav {
     background-image: url('Bilder och videos/book-leaves-table.jpg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
     padding: 6rem 0;
 }
 /* Overlay så att texten syns tydligt*/
