@@ -359,9 +359,16 @@ footer {
     select {
         width: 100%;
     }
-    table {
-        display: block;
+    /* Tabell fix för schema.html */
+    .planner{
         overflow-x: auto;
+    }
+    .planner table {
+        min-width: 700px;
+        width: 100%;
+    }
+    th, td {
+        min-width: 140px;
     }
     body {
         overflow-x:hidden
