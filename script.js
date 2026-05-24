@@ -92,9 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
         program.addEventListener('change', renderCourses);
         year.addEventListener('change', renderCourses);
 
-        /*================================
-            Drag-and-drop till tabellen
-         ================================ */
+        /* Drag-and-drop till tabellen */
         const tableDropCells = document.querySelectorAll('td[contenteditable="true"]');
 
         tableDropCells.forEach(cell => {
@@ -224,9 +222,7 @@ document.addEventListener('DOMContentLoaded', () => {
             visaFel('meddelande', 'meddelande-fel', val.length > 0 && val.length < 10);
         });
 
-        /*================================
-            OpenStreetMap - Leaflet karta
-         ================================ */
+        /*OpenStreetMap - Leaflet karta*/
         const avaKoordinater = [59.4439, 18.0686];
 
         const karta = L.map('karta').setView(avaKoordinater, 15);

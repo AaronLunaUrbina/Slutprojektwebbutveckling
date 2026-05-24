@@ -1,11 +1,131 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>PluggaPå! | Studietips</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="Slutprojekt.CSS">
 </head>
 <body>
-    
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">PluggaPå!</a>
+            <button class="menu-toggle" aria-label="Öppna meny">☰</button>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Hem</a></li>
+                    <li><a href="schema.html">Planeringsschema</a></li>
+                    <li><a href="studietips.html">Studietips</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section class="tips-hero">
+            <div class="container">
+                <h1>Studietips</h1>
+                <p>Smarta tekniker och vanor som hjälper dig att plugga effektivare och må bättre.</p>
+            </div>
+        </section>
+
+        <!-- Metoder-sektionen -->
+        <section class="tips-metoder">
+            <div class="container">
+                <h2>Populära studiemetoder</h2>
+                <div class="tips-grid">
+
+                    <article class="tips-kort">
+                        <h3>Pomodoro-tekniken</h3>
+                        <p>Jobba fokuserat i 25 minuter, ta sedan 5 minuters paus. Efter fyra sådana block tar du en längre paus på 15–30 minuter. Tekniken hjälper dig att hålla koncentrationen uppe och undvika mental utmattning.</p>
+                    </article>
+
+                    <article class="tips-kort">
+                        <h3>Spaced repetition</h3>
+                        <p>Repetera material med ökande mellanrum, till exempel dag 1, dag 3, dag 7 och dag 14. Hjärnan befäster kunskap bättre när den tvingas plocka fram den med lite glömska emellan.</p>
+                    </article>
+
+                    <article class="tips-kort">
+                        <h3>Active recall</h3>
+                        <p>Istället för att läsa om samma text flera gånger, stäng boken och försök återberätta vad du minns. Det är bevisat en av de mest effektiva inlärningsmetoderna som finns.</p>
+                    </article>
+
+                    <article class="tips-kort">
+                        <h3>Mindmaps</h3>
+                        <p>Rita upp ett mindmap med huvudämnet i mitten och grenar ut till underämnen. Visuella kopplingar gör det lättare att förstå samband och komma ihåg helheten.</p>
+                    </article>
+
+                    <article class="tips-kort">
+                        <h3>Studiegrupp</h3>
+                        <p>Att förklara ett ämne för någon annan är ett av de bästa sätten att lära sig det på djupet. Bilda en studiegrupp och turas om att undervisa varandra.</p>
+                    </article>
+
+                    <article class="tips-kort">
+                        <h3>Provfrågor</h3>
+                        <p>Öva på gamla prov och gör egna frågor baserade på kursinnehållet. Det tränar dig att tänka som läraren och förstå vad som faktiskt är viktigt.</p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Vanor-sektionen -->
+        <section class="tips-vanor">
+            <div class="container">
+                <h2>Bra studievanor</h2>
+                <div class="vanor-wrapper">
+                    <article class="vanor-text">
+                        <p>Att plugga smart handlar lika mycket om dina vanor runt studierna som själva pluggandet. Här är några saker som gör stor skillnad:</p>
+                        <ul class="vanor-lista">
+                            <li> Lägg undan mobilen under studietiden, varje notis bryter koncentrationen i minst 20 minuter</li>
+                            <li> Sov minst 8 timmar, hjärnan bearbetar och lagrar minnen under sömnen</li>
+                            <li> Rör på dig varje dag, träning ökar blodflödet till hjärnan och förbättrar fokus</li>
+                            <li> Drick tillräckligt med vatten, redan mild uttorkning försämrar koncentrationen</li>
+                            <li> Planera studierna i förväg, börja inte läsa kvällen innan provet</li>
+                            <li> Sätt konkreta mål "läsa kapitel 3" är bättre än "plugga lite matte"</li>
+                        </ul>
+                    </article>
+                    <article class="vanor-bild">
+                        <img
+                            src="Bilder och videos/IMG1.jpg"
+                            srcset="Bilder och videos/IMG1.jpg 600w, Bilder och videos/IMG1.jpg 1200w"
+                            sizes="(max-width: 768px) 100vw, 50vw"
+                            alt="Elev som studerar vid skrivbord"
+                            loading="lazy">
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Snabbtips-sektionen -->
+        <section class="tips-snabb">
+            <div class="container">
+                <h2>Snabba tips inför prov</h2>
+                <ol class="snabb-lista">
+                    <li>Börja repetera minst en vecka innan provet, inte dagen innan</li>
+                    <li>Skriv en sammanfattning med egna ord, det befäster kunskapen</li>
+                    <li>Sov ordentligt natten före, att plugga hela natten är kontraproduktivt</li>
+                    <li>Ät en bra frukost på provdagen för bästa koncentration</li>
+                    <li>Läs igenom alla frågor innan du börjar svara, planera din tid</li>
+                </ol>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 PluggaPå! | Skapad av gymnasieelever för gymnasieelever</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

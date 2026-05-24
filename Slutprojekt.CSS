@@ -444,8 +444,30 @@ footer {
             #karta {
                 height: 300px;
             }
-        }
-
+            /* Responsivitet för studietips */
+            .tips-hero h1 {
+        font-size: 2.2rem;
+    }
+ 
+    .tips-grid {
+        grid-template-columns: 1fr;
+    }
+ 
+    .tips-metoder h2,
+    .tips-vanor h2,
+    .tips-snabb h2 {
+        font-size: 2rem;
+    }
+ 
+    .vanor-wrapper {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+ 
+    .vanor-bild img {
+        height: 250px;
+    }
+}
 
 /*================================
     SCHEMA.CSS
@@ -760,3 +782,153 @@ td.drop-target {
             font-size: 1.1rem;
             flex-shrink: 0;
         }
+/*==================================
+    STUDIETIPS.CSS 
+    ================================ */
+    /* Hero */
+.tips-hero {
+    min-height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--white);
+    text-align: center;
+    padding: 4rem 1rem;
+}
+ 
+.tips-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+ 
+.tips-hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+ 
+/* Metoder-sektionen */
+.tips-metoder {
+    padding: 6rem 0;
+}
+ 
+.tips-metoder h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 4rem;
+}
+ 
+/* Tips-kort grid */
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+ 
+.tips-kort {
+    background-color: var(--white);
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+ 
+.tips-kort:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+ 
+.tips-ikon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+ 
+.tips-kort h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+    color: var(--text-color);
+}
+ 
+.tips-kort p {
+    color: var(--gray);
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+ 
+/* Vanor-sektionen */
+.tips-vanor {
+    background-color: var(--white);
+    padding: 6rem 0;
+}
+ 
+.tips-vanor h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+ 
+.vanor-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+ 
+.vanor-text p {
+    color: var(--gray);
+    margin-bottom: 1.5rem;
+}
+ 
+/* Vanor-lista */
+.vanor-lista {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+ 
+.vanor-lista li {
+    font-size: 1rem;
+    line-height: 1.6;
+    padding: 0.8rem 1rem;
+    background-color: var(--background-color);
+    border-radius: 10px;
+    border-left: 4px solid var(--secondary-color);
+}
+ 
+.vanor-bild img {
+    width: 100%;
+    border-radius: 16px;
+    object-fit: cover;
+    height: 400px;
+}
+ 
+/* Snabbtips-sektionen */
+.tips-snabb {
+    padding: 6rem 0;
+}
+ 
+.tips-snabb h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+ 
+/* Numrerad lista */
+.snabb-lista {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-left: 1.5rem;
+}
+ 
+.snabb-lista li {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    padding: 0.5rem 0;
+    color: var(--text-color);
+}
+    
