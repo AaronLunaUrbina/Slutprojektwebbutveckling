@@ -24,9 +24,9 @@ document
  ================================ */
  const program = document.getElementById('program');
  const year = document.getElementById('year');
- const courses = document.getElementById('courseGrid');
+ const grid = document.getElementById('courseGrid');
 
- if(program && year && courses){
+ if(program && year && grid){
     const courses = {
         ekonomi: {
             1: ['Företagsekonomi', 'Matematik 1b', 'Svenska 1/SVA1', 'Engelska 5', 'Idrott och hälsa 1', 'Historia 1b', 'Jurdik'],
@@ -53,17 +53,15 @@ document
         grid.innerHTML = '';
         const p= program.value;
         const y = year.value;
-        if(
-        !p||
-        !y
-        ){
+        if(!p||!y){
         return;
+        }
         courses[p][y].forEach(course => {
             const div = document.createElement('div');
             div.className = 'course';
             div.innerHTML = `<h3>${course}</h3> <p> Klicka för att lägga till</p>`;
             div.addEventListener('click', () => {
-                alert(course + 'valdes!');
+                div.classList.toggle('selected');
             });
             grid.appendChild(div);
         });
@@ -72,4 +70,4 @@ document
     year.addEventListener('change', renderCourses);
         
 }
-}
+
