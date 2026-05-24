@@ -348,6 +348,24 @@ footer {
     .nav-links li:nth-child(4) {
         transition-delay: 0.2s;
     }
+    /* Mobilfix för schema.html*/
+    .course-grid {
+        grid-template-columns: 1fr;
+    }
+    .select-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    select {
+        width: 100%;
+    }
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+    body {
+        overflow-x:hidden
+    }
 
     /*KORTER*/
     .korter {
@@ -461,3 +479,10 @@ footer {
     tfoot{
         background-color: var(--background-color);
     }
+/* JavaScript CSS*/
+.course.selected {
+    background:
+    linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+    color: var(--white);
+    transform:translateY(-8px);
+}
