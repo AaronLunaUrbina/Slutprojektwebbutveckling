@@ -73,6 +73,8 @@ nav {
     color: var(--white);
     font-weight: 500;
     transition: color 0.3s ease;
+    display: inline-block;
+    padding: 0.8rem 1rem;
 }
 
 .nav-links a:hover {
