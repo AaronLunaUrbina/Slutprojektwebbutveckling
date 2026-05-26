@@ -594,6 +594,8 @@ td.drop-target {
     font-size: 1rem;
     padding: 0;
     line-height: 1;
+    min-width: 44px;
+    min-height: 44px;
 }
 
 /*================================
