@@ -241,7 +241,7 @@ nav {
 /* INFO SEKTIONEN */
 .info-section {
     background-color: var(--white);
-    background-image: url('Bilder och videos/book-leaves-table.jpg');
+    background-image: url('Images/book-leaves-table.jpg');
     background-size: cover;
     background-position: center;
     padding: 6rem 0;
@@ -314,6 +314,7 @@ footer {
     .hero-content p {
         font-size: 1rem;
     }
+    
     /*HAMBURGER */
     .menu-toggle {
     display: block;
@@ -478,6 +479,7 @@ footer {
     text-align: center;
     padding: 4rem 1rem;
  }
+ 
     .schema-hero h1 {
         font-size: 3rem;
         margin-bottom: 1rem;
