@@ -469,16 +469,31 @@ footer {
  ================================ */
 
  /*Hero sektion för schema sidan*/
- .schema-hero {
+.schema-hero {
     min-height: 50vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background-image: url('../Images/schema-hero.jpg');
+    background-size: cover;
+    background-position: center;
     color: var(--white);
     text-align: center;
     padding: 4rem 1rem;
- }
+    position: relative;
+}
+
+.schema-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.45);
+}
+
+.schema-hero .container {
+    position: relative;
+    z-index: 1;
+}
  
     .schema-hero h1 {
         font-size: 3rem;
@@ -602,15 +617,30 @@ td.drop-target {
     KONTAKT.CSS
  ================================ */
  .kontakt-hero {
-            min-height: 40vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: var(--white);
-            text-align: center;
-            padding: 4rem 1rem;
-        }
+    min-height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../Images/kontakt-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
+    text-align: center;
+    padding: 4rem 1rem;
+    position: relative;
+}
+
+.kontakt-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.45);
+}
+
+.kontakt-hero .container {
+    position: relative;
+    z-index: 1;
+}
 
         .kontakt-hero h1 {
             font-size: 3rem;
@@ -787,10 +817,25 @@ td.drop-target {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background-image: url('../Images/tips-hero.jpg');
+    background-size: cover;
+    background-position: center;
     color: var(--white);
     text-align: center;
     padding: 4rem 1rem;
+    position: relative;
+}
+
+.tips-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.45);
+}
+
+.tips-hero .container {
+    position: relative;
+    z-index: 1;
 }
  
 .tips-hero h1 {
